@@ -22,3 +22,6 @@ flutter:
 
   assets:
   - images/
+
+module:
+  androidX: true
