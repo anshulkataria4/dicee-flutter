@@ -33,7 +33,8 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6)+1;
+                  leftDiceNumber =random(6);
+                  rightDiceNumber = random(6);
                 });
                 print('Left Buttton Pressed$leftDiceNumber');
               },
@@ -44,7 +45,8 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  rightDiceNumber = Random().nextInt(6)+1;
+                  leftDiceNumber = random(6);
+                  rightDiceNumber = random(6);
                 });
                 print('Right Buttton Pressed$rightDiceNumber');
               },
@@ -55,4 +57,10 @@ class _DicePageState extends State<DicePage> {
       ),
     );
   }
+}
+
+
+int random(int max){
+  return Random().nextInt(max)+1;
+
 }
